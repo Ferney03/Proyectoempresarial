@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    
+    <h:head>
+        <title> Registro personas con discapacidad </title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h2>Personas con discapacidad</h2>
+            <h:panelGrid>
+                <h:outputLabel value = "Nombre completo: " style = "font-weight: inherit"/>
+                <h:inputText value ="#{discap.usuario}"
+                             required ="true"
+                             requiredMessage ="Error: Introduce nombre"/>
+                <h:outputLabel value ="Edad: " style="font-weight: inherit"/>
+                <h:inputSecret value ="#{discap.edad}"
+                               required ="true"
+                               requiredMessage=" Error: Introduce edad"/>
+                <h:outputLabel value ="Tipo de discapacidad: " style="font-weight: inherit"/>
+                <h:inputSecret value ="#{discap.discapacidad}"
+                               required ="true"
+                               requiredMessage=" Error: Introduce alguna discapacidad"/>
+                <h:commandButton id ="submit" value="Login " action ="Respuesta"/>
+                <h:commandButton id ="reset" value="Clear " type ="reset"/>
+                    
+                
+            </h:panelGrid>
+            
+            
+        </h:form>
+    </h:body>
+</html>
+
